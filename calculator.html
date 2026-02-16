@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飲食計算器 | Raw Cat Diet Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-brand">
+                <h1>� AnyMoThings</h1>
+                <p class="nav-subtitle">貓生肉飲食指南 Raw Cat Diet Guide</p>
+            </div>
+            <ul>
+                <li><a href="index.html">主頁 Home</a></li>
+                <li><a href="comparison.html">飲食比較 Comparison</a></li>
+                <li><a href="calculator.html">飲食計算器 Calculator</a></li>
+                <li><a href="transition.html">轉換計劃 Transition</a></li>
+                <li><a href="resources.html">實用資源 Resources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h2>生肉飲食計算器 (PMR)</h2>
+            <p>儲存您的貓咪資料，快速計算每日所需份量</p>
+            <div class="pmr-badge-small">獵物模型生肉飲食 Prey Model Raw</div>
+        </section>
+
+        <section class="calculator-card">
+            <h3>我的貓咪 My Cats</h3>
+            
+            <div id="savedCats" class="saved-cats-list">
+                <!-- Saved cats will appear here -->
+            </div>
+            
+            <button onclick="showAddCatForm()" class="btn-secondary" id="addCatBtn">
+                ➕ 新增貓咪 Add New Cat
+            </button>
+        </section>
+
+        <section class="calculator-card" id="catForm" style="display: none;">
+            <h3 id="formTitle">新增貓咪 Add New Cat</h3>
+            
+            <div class="info-box" style="margin-bottom: 1.5rem;">
+                <p><strong>關於 PMR 比例：</strong>本計算器使用標準 80/10/10 獵物模型比例</p>
+                <p>80% 肌肉肉類（含心臟）+ 10% 骨頭 + 10% 內臟（5% 肝臟 + 5% 其他）</p>
+            </div>
+
+            <div class="form-group">
+                <label for="catName">貓咪名字 Cat Name: *</label>
+                <input type="text" id="catName" placeholder="例如：小花 e.g., Fluffy" required />
+            </div>
+            
+            <div class="form-group">
+                <label for="catWeight">貓咪體重 Cat Weight (kg): *</label>
+                <input type="number" id="catWeight" min="1" max="15" step="0.1" value="4" required />
+            </div>
+
+            <div class="form-group">
+                <label for="catAge">年齡 Age (optional):</label>
+                <input type="text" id="catAge" placeholder="例如：3歲 e.g., 3 years" />
+            </div>
+
+            <div class="form-group">
+                <label for="activityLevel">活動程度 Activity Level: *</label>
+                <select id="activityLevel">
+                    <option value="2">低 Low (室內貓 Indoor)</option>
+                    <option value="3" selected>中 Medium (一般活動 Normal)</option>
+                    <option value="4">高 High (活躍/幼貓 Active/Kitten)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="catNotes">備註 Notes (optional):</label>
+                <textarea id="catNotes" rows="3" placeholder="例如：挑食、健康狀況等 e.g., picky eater, health conditions"></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button onclick="saveCat()" class="btn" id="saveBtn">💾 儲存 Save</button>
+                <button onclick="cancelForm()" class="btn-secondary">取消 Cancel</button>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h3>🍗 常用肉類選擇 Common Meat Options</h3>
+            <div class="meat-options">
+                <div class="meat-card">
+                    <h4>雞肉 Chicken</h4>
+                    <p>最常用，價格實惠<br>Most common, affordable</p>
+                </div>
+                <div class="meat-card">
+                    <h4>牛肉 Beef</h4>
+                    <p>營養豐富<br>Nutrient-rich</p>
+                </div>
+                <div class="meat-card">
+                    <h4>鴨肉 Duck</h4>
+                    <p>高蛋白，豐富鐵質<br>High protein, rich in iron</p>
+                </div>
+                <div class="meat-card">
+                    <h4>鹿肉 Venison</h4>
+                    <p>低脂，適合敏感貓<br>Lean, good for sensitive cats</p>
+                </div>
+                <div class="meat-card">
+                    <h4>兔肉 Rabbit</h4>
+                    <p>低脂肪，易消化<br>Low-fat, digestible</p>
+                </div>
+                <div class="meat-card">
+                    <h4>魚類 Fish</h4>
+                    <p>偶爾添加<br>Occasional addition</p>
+                </div>
+            </div>
+            <p class="tip">💡 建議輪換不同肉類以確保營養多樣化</p>
+            <p class="tip">🔄 每週至少輪換2-3種不同蛋白質來源 Rotate 2-3 different protein sources weekly</p>
+        </section>
+
+        <section class="content-section">
+            <h3>📝 PMR 準備提示 PMR Preparation Tips</h3>
+            <ul>
+                <li>可預先準備一週份量並分裝冷凍 Prepare weekly portions and freeze in individual servings</li>
+                <li>解凍後24小時內食用 Use within 24 hours after thawing</li>
+                <li>逐步轉換，觀察貓咪反應 Transition gradually over 1-2 weeks</li>
+                <li>確保肉類來源新鮮可靠 Ensure fresh, reliable meat sources</li>
+                <li>準備後徹底清潔器具 Clean all utensils thoroughly after preparation</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🐾 AnyMoThings</h3>
+                    <p>為香港貓主提供優質生肉飲食資訊</p>
+                    <p>Quality raw feeding information for Hong Kong cat owners</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>關注我們 Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/anymothings/" target="_blank" rel="noopener noreferrer" class="instagram-link">
+                            <span class="instagram-icon">📷</span>
+                            <span>@anymothings</span>
+                        </a>
+                    </div>
+                    <p class="social-description">在 Instagram 查看更多貓咪生肉飲食分享</p>
+                    <p class="social-description">See more raw feeding tips on Instagram</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>聯絡 Contact</h3>
+                    <p>📧 透過 Instagram 私訊聯絡我們</p>
+                    <p>DM us on Instagram</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 AnyMoThings | Raw Cat Diet HK</p>
+                <p>僅供教育參考 For educational purposes only | 請諮詢獸醫專業意見 Always consult with a veterinarian</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

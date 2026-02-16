@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轉換計劃 | Transition Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🐾 AnyMoThings</h1>
+                <p class="nav-subtitle">貓生肉飲食指南 Raw Cat Diet Guide</p>
+            </div>
+            <ul>
+                <li><a href="index.html">主頁 Home</a></li>
+                <li><a href="comparison.html">飲食比較 Comparison</a></li>
+                <li><a href="calculator.html">飲食計算器 Calculator</a></li>
+                <li><a href="transition.html">轉換計劃 Transition</a></li>
+                <li><a href="resources.html">實用資源 Resources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h2>PMR 轉換計劃 Transition Planner</h2>
+            <p>為您的貓咪制定安全、循序漸進的轉換計劃</p>
+            <div class="pmr-badge-small">獵物模型生肉飲食 Prey Model Raw</div>
+        </section>
+
+        <section class="info-card">
+            <h3>⚕️ 重要提醒 Important Notice</h3>
+            <p><strong>在開始轉換前，請諮詢您的獸醫。</strong>某些健康狀況可能需要特別注意或調整。</p>
+            <p><strong>Before starting, consult your veterinarian.</strong> Some health conditions may require special attention or modifications.</p>
+            <p class="tip">💡 本計劃是一般指引，每隻貓的反應可能不同。請根據您貓咪的實際情況調整速度。</p>
+        </section>
+
+        <section class="calculator-card">
+            <h3>選擇您的貓咪 Select Your Cat</h3>
+            
+            <div id="catSelector" class="cat-selector">
+                <!-- Cat selection will appear here -->
+            </div>
+        </section>
+
+        <section class="calculator-card" id="transitionPlanSection" style="display: none;">
+            <h3>為 <span id="selectedCatName"></span> 制定轉換計劃</h3>
+            
+            <div class="form-group">
+                <label>目前飲食 Current Diet:</label>
+                <select id="currentDiet">
+                    <option value="dry">乾糧 Dry Food (Kibble)</option>
+                    <option value="canned">罐頭 Canned Food</option>
+                    <option value="mixed">混合餵食 Mixed Feeding</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>轉換速度 Transition Speed:</label>
+                <select id="transitionSpeed">
+                    <option value="7">快速 Fast (7 天 days)</option>
+                    <option value="14" selected>標準 Standard (14 天 days)</option>
+                    <option value="30">緩慢 Slow (30 天 days)</option>
+                </select>
+            </div>
+
+            <button onclick="generateTransitionPlan()" class="btn">生成計劃 Generate Plan</button>
+        </section>
+
+        <section class="transition-plan-display" id="planDisplay" style="display: none;">
+            <!-- Plan will be displayed here -->
+        </section>
+
+        <section class="content-section">
+            <h3>🔍 轉換期間可能出現的情況 What to Expect</h3>
+            
+            <div class="expectation-grid">
+                <div class="expectation-card">
+                    <h4>💩 糞便變化 Stool Changes</h4>
+                    <p><strong>正常現象：</strong></p>
+                    <ul>
+                        <li>初期可能較軟或較硬</li>
+                        <li>顏色變深（正常）</li>
+                        <li>份量減少（吸收率提高）</li>
+                        <li>氣味減少</li>
+                    </ul>
+                    <p><strong>何時需要關注：</strong>持續腹瀉超過2天、血便、嚴重便秘</p>
+                </div>
+
+                <div class="expectation-card">
+                    <h4>🍽️ 食慾變化 Appetite Changes</h4>
+                    <p><strong>正常現象：</strong></p>
+                    <ul>
+                        <li>初期可能挑食（質地不熟悉）</li>
+                        <li>食量可能暫時減少</li>
+                        <li>適應後通常食慾增加</li>
+                    </ul>
+                    <p><strong>建議：</strong>保持耐心，不要強迫。可以輕微加熱至室溫增加香味。</p>
+                </div>
+
+                <div class="expectation-card">
+                    <h4>✨ 皮毛與能量 Coat & Energy</h4>
+                    <p><strong>可能觀察到：</strong></p>
+                    <ul>
+                        <li>2-4週後皮毛變得更有光澤</li>
+                        <li>能量水平可能提高</li>
+                        <li>體重可能調整（過重貓減重，過輕貓增重）</li>
+                    </ul>
+                </div>
+
+                <div class="expectation-card warning">
+                    <h4>⚠️ 關於「排毒」的迷思 Detox Myths</h4>
+                    <p><strong>科學事實：</strong></p>
+                    <p>貓的肝臟和腎臟負責排毒，不需要特殊「排毒期」。轉換期間的變化主要是消化系統適應新食物。</p>
+                    <p><strong>如果出現嚴重症狀</strong>（嘔吐、嚴重腹瀉、無精打采），請立即諮詢獸醫，這不是「排毒」，可能是健康問題。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h3>🌡️ 香港氣候注意事項 HK Climate Considerations</h3>
+            <div class="hk-tips">
+                <div class="tip-box">
+                    <h4>🥵 炎熱潮濕天氣 Hot & Humid Weather</h4>
+                    <ul>
+                        <li>生肉在室溫下不應超過30分鐘</li>
+                        <li>餵食後立即清理剩餘食物</li>
+                        <li>使用冷藏碗或冰墊保持食物新鮮</li>
+                        <li>夏季考慮分成更小份量，多次餵食</li>
+                    </ul>
+                </div>
+
+                <div class="tip-box">
+                    <h4>❄️ 儲存建議 Storage Tips</h4>
+                    <ul>
+                        <li>購買後立即冷凍（-18°C或以下）</li>
+                        <li>冷凍至少3天以殺死寄生蟲</li>
+                        <li>分裝成每日份量，方便解凍</li>
+                        <li>解凍後24小時內使用</li>
+                        <li>使用密封容器防止交叉污染</li>
+                    </ul>
+                </div>
+
+                <div class="tip-box">
+                    <h4>🧼 衛生習慣 Hygiene Practices</h4>
+                    <ul>
+                        <li>準備生肉前後徹底洗手</li>
+                        <li>使用專用砧板和刀具</li>
+                        <li>每次使用後用熱水和清潔劑清洗器具</li>
+                        <li>定期清潔貓碗（每餐後）</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🐾 AnyMoThings</h3>
+                    <p>為香港貓主提供優質生肉飲食資訊</p>
+                    <p>Quality raw feeding information for Hong Kong cat owners</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>關注我們 Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/anymothings/" target="_blank" rel="noopener noreferrer" class="instagram-link">
+                            <span class="instagram-icon">📷</span>
+                            <span>@anymothings</span>
+                        </a>
+                    </div>
+                    <p class="social-description">在 Instagram 查看更多貓咪生肉飲食分享</p>
+                    <p class="social-description">See more raw feeding tips on Instagram</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>聯絡 Contact</h3>
+                    <p>📧 透過 Instagram 私訊聯絡我們</p>
+                    <p>DM us on Instagram</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 AnyMoThings | Raw Cat Diet HK</p>
+                <p>僅供教育參考 For educational purposes only | 請諮詢獸醫專業意見 Always consult with a veterinarian</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="transition.js"></script>
+</body>
+</html>
