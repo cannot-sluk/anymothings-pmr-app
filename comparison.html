@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飲食比較 | Diet Comparison</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🐾 AnyMoThings</h1>
+                <p class="nav-subtitle">貓生肉飲食指南 Raw Cat Diet Guide</p>
+            </div>
+            <ul>
+                <li><a href="index.html">主頁 Home</a></li>
+                <li><a href="comparison.html">飲食比較 Comparison</a></li>
+                <li><a href="calculator.html">飲食計算器 Calculator</a></li>
+                <li><a href="transition.html">轉換計劃 Transition</a></li>
+                <li><a href="resources.html">實用資源 Resources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h2>貓糧飲食全面比較</h2>
+            <p>了解生肉（PMR）、乾糧、罐頭和熟食的優缺點</p>
+            <div class="pmr-badge-small">本指南採用獵物模型生肉飲食 (Prey Model Raw)</div>
+        </section>
+
+        <section class="info-card">
+            <h3>🎯 關於本指南的生肉飲食方法</h3>
+            <p><strong>本指南採用獵物模型生肉飲食 (Prey Model Raw - PMR)</strong></p>
+            <p>PMR 是最純粹的生肉餵養方法，只使用動物性成分，模仿貓咪在野外捕食整隻獵物（如老鼠、小鳥）的營養比例。</p>
+            
+            <div class="pmr-vs-barf">
+                <div class="method-box">
+                    <h4>✅ PMR (本指南採用)</h4>
+                    <ul>
+                        <li>80% 肌肉肉類（含心臟）</li>
+                        <li>10% 可食用骨頭</li>
+                        <li>10% 內臟（5% 肝 + 5% 其他）</li>
+                        <li>❌ 無蔬菜水果</li>
+                        <li>❌ 無合成補充劑</li>
+                        <li>✅ 純動物性成分</li>
+                    </ul>
+                </div>
+                
+                <div class="method-box">
+                    <h4>ℹ️ BARF (另一種方法)</h4>
+                    <ul>
+                        <li>70% 肌肉肉類</li>
+                        <li>10% 骨頭</li>
+                        <li>10% 內臟</li>
+                        <li>✅ 包含蔬菜水果（5-10%）</li>
+                        <li>✅ 可能添加補充劑</li>
+                        <li>⚠️ 混合動植物成分</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p class="tip">💡 <strong>為什麼選擇 PMR？</strong>貓是專性肉食動物，不需要植物性食物。所有必需營養素都能從動物組織中獲得，這是最符合貓咪生理的飲食方式。</p>
+        </section>
+
+        <section class="info-card">
+            <h3>🤔 為什麼獸醫多推薦乾糧？</h3>
+            <p>許多獸醫推薦乾糧的原因包括：</p>
+            <ul>
+                <li><strong>方便性：</strong>易於儲存和餵食</li>
+                <li><strong>成本效益：</strong>相對便宜</li>
+                <li><strong>營養標準化：</strong>商業配方經過測試</li>
+                <li><strong>獸醫教育：</strong>獸醫學院課程多由寵物食品公司贊助</li>
+                <li><strong>牙齒健康迷思：</strong>傳統認為乾糧有助清潔牙齒（但研究顯示效果有限）</li>
+            </ul>
+            <p class="tip">💡 然而，方便不等於最佳。貓是專性肉食動物，天生設計來消化生肉，而非高碳水化合物的加工食品。</p>
+        </section>
+
+        <section class="comparison-table-section">
+            <h3>📊 四種飲食方式詳細比較</h3>
+            
+            <div class="comparison-grid">
+                <!-- Raw Food -->
+                <div class="diet-card raw-card">
+                    <div class="diet-header">
+                        <h4>🥩 生肉飲食 (PMR)</h4>
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    
+                    <div class="pmr-label">Prey Model Raw - 獵物模型</div>
+                    
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <strong>✅ 優點 Pros:</strong>
+                            <ul>
+                                <li>最接近天然飲食</li>
+                                <li>高蛋白、零碳水化合物</li>
+                                <li>水分含量高 (70%)</li>
+                                <li>營養素未被破壞</li>
+                                <li>純動物性成分（無植物）</li>
+                                <li>改善皮毛健康</li>
+                                <li>更好的消化吸收</li>
+                                <li>減少糞便氣味</li>
+                                <li>更清潔的牙齒</li>
+                                <li>更高能量水平</li>
+                                <li>無添加劑或防腐劑</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cons">
+                            <strong>⚠️ 缺點 Cons:</strong>
+                            <ul>
+                                <li>需要學習 PMR 比例</li>
+                                <li>準備時間較長</li>
+                                <li>需要冷藏/冷凍</li>
+                                <li>細菌風險（需正確處理）</li>
+                                <li>初期成本較高</li>
+                                <li>需要多樣化肉類來源</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="diet-stats">
+                        <div class="stat">
+                            <span class="stat-label">水分</span>
+                            <span class="stat-value">70%</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">蛋白質</span>
+                            <span class="stat-value">高</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">碳水化合物</span>
+                            <span class="stat-value">0%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dry Food -->
+                <div class="diet-card dry-card">
+                    <div class="diet-header">
+                        <h4>🌾 乾糧 (Kibble)</h4>
+                        <span class="rating">⭐⭐</span>
+                    </div>
+                    
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <strong>✅ 優點 Pros:</strong>
+                            <ul>
+                                <li>非常方便</li>
+                                <li>價格便宜</li>
+                                <li>長期保存</li>
+                                <li>易於測量份量</li>
+                                <li>廣泛可得</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cons">
+                            <strong>⚠️ 缺點 Cons:</strong>
+                            <ul>
+                                <li>水分極低 (10%)</li>
+                                <li>高碳水化合物 (30-50%)</li>
+                                <li>高度加工</li>
+                                <li>營養素被破壞</li>
+                                <li>可能導致脫水</li>
+                                <li>增加腎臟負擔</li>
+                                <li>容易導致肥胖</li>
+                                <li>牙齒清潔效果有限</li>
+                                <li>含防腐劑和添加劑</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="diet-stats">
+                        <div class="stat">
+                            <span class="stat-label">水分</span>
+                            <span class="stat-value">10%</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">蛋白質</span>
+                            <span class="stat-value">中</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">碳水化合物</span>
+                            <span class="stat-value">30-50%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Canned Food -->
+                <div class="diet-card canned-card">
+                    <div class="diet-header">
+                        <h4>🥫 罐頭 (Wet Food)</h4>
+                        <span class="rating">⭐⭐⭐⭐</span>
+                    </div>
+                    
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <strong>✅ 優點 Pros:</strong>
+                            <ul>
+                                <li>高水分含量 (80%)</li>
+                                <li>較高蛋白質</li>
+                                <li>適口性好</li>
+                                <li>相對方便</li>
+                                <li>比乾糧更接近天然</li>
+                                <li>有助水分攝取</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cons">
+                            <strong>⚠️ 缺點 Cons:</strong>
+                            <ul>
+                                <li>仍經過高溫加工</li>
+                                <li>營養素部分流失</li>
+                                <li>含增稠劑和膠質</li>
+                                <li>開封後需冷藏</li>
+                                <li>價格較高</li>
+                                <li>仍含碳水化合物</li>
+                                <li>可能含防腐劑</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="diet-stats">
+                        <div class="stat">
+                            <span class="stat-label">水分</span>
+                            <span class="stat-value">80%</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">蛋白質</span>
+                            <span class="stat-value">中-高</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">碳水化合物</span>
+                            <span class="stat-value">5-15%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cooked Food -->
+                <div class="diet-card cooked-card">
+                    <div class="diet-header">
+                        <h4>🍳 熟食 (Cooked)</h4>
+                        <span class="rating">⭐⭐⭐</span>
+                    </div>
+                    
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <strong>✅ 優點 Pros:</strong>
+                            <ul>
+                                <li>減少細菌風險</li>
+                                <li>可控制食材</li>
+                                <li>較易被接受</li>
+                                <li>適合過渡期</li>
+                                <li>新鮮食材</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cons">
+                            <strong>⚠️ 缺點 Cons:</strong>
+                            <ul>
+                                <li>烹調破壞營養素</li>
+                                <li>牛磺酸流失</li>
+                                <li>需要額外補充劑</li>
+                                <li>準備時間長</li>
+                                <li>難以達到營養平衡</li>
+                                <li>不如生肉天然</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="diet-stats">
+                        <div class="stat">
+                            <span class="stat-label">水分</span>
+                            <span class="stat-value">60-70%</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">蛋白質</span>
+                            <span class="stat-value">中-高</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">碳水化合物</span>
+                            <span class="stat-value">變化大</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h3>🔬 科學角度：為什麼生肉更適合貓？</h3>
+            
+            <div class="science-points">
+                <div class="science-card">
+                    <h4>1. 專性肉食動物 Obligate Carnivores</h4>
+                    <p>貓的消化系統短而酸性強，專門設計來消化生肉和骨頭。牠們缺乏消化大量碳水化合物的酶。PMR 完全符合這個生理設計。</p>
+                </div>
+                
+                <div class="science-card">
+                    <h4>2. 水分需求 Hydration Needs</h4>
+                    <p>貓的口渴機制較弱，在野外主要從獵物獲取水分。乾糧只含10%水分，可能導致慢性脫水和腎臟問題。PMR 提供 70% 水分。</p>
+                </div>
+                
+                <div class="science-card">
+                    <h4>3. 零碳水化合物 Zero Carbohydrate Need</h4>
+                    <p>貓對碳水化合物的需求為零。高碳水飲食（如乾糧）可能導致肥胖、糖尿病和其他代謝問題。PMR 不含任何碳水化合物。</p>
+                </div>
+                
+                <div class="science-card">
+                    <h4>4. 營養生物利用度 Nutrient Bioavailability</h4>
+                    <p>生肉中的營養素以最天然、最易吸收的形式存在。加工會破壞酶、維生素和氨基酸。PMR 保留所有天然營養。</p>
+                </div>
+                
+                <div class="science-card">
+                    <h4>5. 牛磺酸 Taurine</h4>
+                    <p>貓無法自行合成足夠的牛磺酸，必須從飲食獲取。烹調會破壞牛磺酸，而 PMR 中的生心臟和肌肉肉類保留完整含量。</p>
+                </div>
+                
+                <div class="science-card">
+                    <h4>6. 牙齒健康真相 Dental Health Truth</h4>
+                    <p>研究顯示乾糧對牙齒清潔效果有限。PMR 中的生肉和骨頭的撕咬動作才能真正清潔牙齒和按摩牙齦。</p>
+                </div>
+                
+                <div class="science-card">
+                    <h4>7. 整隻獵物模型 Whole Prey Model</h4>
+                    <p>PMR 的 80/10/10 比例來自對整隻小型獵物（老鼠、小鳥）的營養分析，這正是野生貓科動物的天然飲食。</p>
+                </div>
+                
+                <div class="science-card">
+                    <h4>8. 無需植物性食物 No Plant Matter Needed</h4>
+                    <p>貓缺乏消化植物纖維素的酶，也無法從植物中有效提取營養。PMR 認識到貓的純肉食本質，不添加不必要的植物成分。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section warning">
+            <h3>⚖️ 平衡觀點 Balanced Perspective</h3>
+            <p>雖然 PMR 生肉飲食有諸多優點，但並非適合所有貓主：</p>
+            <ul>
+                <li><strong>時間和精力：</strong>需要投入學習 PMR 比例和準備時間</li>
+                <li><strong>經濟考量：</strong>初期投資較高（但長遠可能節省醫療費用）</li>
+                <li><strong>生活方式：</strong>需要冷藏空間和嚴格衛生習慣</li>
+                <li><strong>貓咪健康狀況：</strong>某些疾病可能需要特殊飲食</li>
+                <li><strong>肉類來源：</strong>需要可靠的新鮮肉類供應</li>
+            </ul>
+            <p><strong>建議：</strong>如果無法完全轉換 PMR，可以考慮混合餵食（如罐頭+部分生肉），仍比純乾糧好。但要注意 PMR 的原則是不添加植物性食物。</p>
+        </section>
+
+        <section class="content-section">
+            <h3>💰 長期成本比較 Long-term Cost Comparison</h3>
+            <table class="cost-table">
+                <thead>
+                    <tr>
+                        <th>飲食類型</th>
+                        <th>每月成本 (4kg貓)</th>
+                        <th>潛在醫療費用</th>
+                        <th>總體評估</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>乾糧</td>
+                        <td>HK$200-400</td>
+                        <td>較高（腎病、糖尿病、肥胖）</td>
+                        <td>短期便宜，長期昂貴</td>
+                    </tr>
+                    <tr>
+                        <td>罐頭</td>
+                        <td>HK$600-1000</td>
+                        <td>中等</td>
+                        <td>中等成本</td>
+                    </tr>
+                    <tr>
+                        <td>熟食</td>
+                        <td>HK$800-1200</td>
+                        <td>中-低</td>
+                        <td>時間成本高</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td>PMR 生肉</td>
+                        <td>HK$600-1000</td>
+                        <td>最低（預防性健康）</td>
+                        <td>最佳長期投資</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="tip">💡 健康的貓意味著更少的獸醫費用。許多 PMR 餵養者報告貓咪更少生病，毛髮更健康，精力更充沛。</p>
+        </section>
+
+        <section class="cta">
+            <h3>準備嘗試生肉飲食？</h3>
+            <p>使用我們的計算器開始規劃</p>
+            <a href="calculator.html" class="btn">前往計算器 Go to Calculator</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🐾 AnyMoThings</h3>
+                    <p>為香港貓主提供優質生肉飲食資訊</p>
+                    <p>Quality raw feeding information for Hong Kong cat owners</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>關注我們 Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/anymothings/" target="_blank" rel="noopener noreferrer" class="instagram-link">
+                            <span class="instagram-icon">📷</span>
+                            <span>@anymothings</span>
+                        </a>
+                    </div>
+                    <p class="social-description">在 Instagram 查看更多貓咪生肉飲食分享</p>
+                    <p class="social-description">See more raw feeding tips on Instagram</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>聯絡 Contact</h3>
+                    <p>📧 透過 Instagram 私訊聯絡我們</p>
+                    <p>DM us on Instagram</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 AnyMoThings | Raw Cat Diet HK</p>
+                <p>僅供教育參考 For educational purposes only | 請諮詢獸醫專業意見 Always consult with a veterinarian</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

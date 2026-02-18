@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnyMoThings - PMR 貓生肉飲食指南 | Raw Cat Diet HK</title>
+    <meta name="description" content="為香港貓主提供的獵物模型生肉飲食（PMR）完整指南。包括飲食計算器、轉換計劃和健康追蹤。">
+    <meta name="keywords" content="貓生肉飲食,PMR,香港,AnyMoThings,raw cat food,prey model raw">
+    <meta name="theme-color" content="#2c3e50">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="AnyMoThings">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="language.js"></script>
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "AnyMoThings PMR Cat Diet Guide",
+      "description": "Complete Prey Model Raw feeding guide for Hong Kong cat owners with calculator, transition planner, and educational resources",
+      "url": "https://anymothings.github.io/pmr-cat-app/",
+      "inLanguage": ["zh-HK", "en"],
+      "publisher": {
+        "@type": "Organization",
+        "name": "AnyMoThings",
+        "url": "https://anymothings.github.io/pmr-cat-app/",
+        "sameAs": ["https://www.instagram.com/anymothings/"],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Hong Kong",
+          "addressCountry": "HK"
+        }
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is PMR (Prey Model Raw)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PMR (Prey Model Raw) is a feeding approach that mimics how cats would eat whole prey in the wild. It uses 80% muscle meat, 10% bone, and 10% organs, without adding vegetables, fruits, or supplements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is PMR safe in Hong Kong's hot and humid weather?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, as long as proper food safety measures are followed. Key points: refrigerate within 30 minutes of purchase, use sealed containers, feed within 24 hours after thawing, clean up leftovers within 30 minutes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can kittens eat PMR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Kittens can start PMR from 8-10 weeks old. Kittens need higher energy and calcium, so increase bone ratio to 12-15% and feed 3-4 times daily."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🐾 AnyMoThings</h1>
+                <p class="nav-subtitle" data-lang="zh">貓生肉飲食指南</p>
+                <p class="nav-subtitle" data-lang="en">Raw Cat Diet Guide</p>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <ul>
+                    <li><a href="index.html" data-lang="zh">主頁</a><a href="index.html" data-lang="en">Home</a></li>
+                    <li><a href="comparison.html" data-lang="zh">飲食比較</a><a href="comparison.html" data-lang="en">Comparison</a></li>
+                    <li><a href="calculator.html" data-lang="zh">飲食計算器</a><a href="calculator.html" data-lang="en">Calculator</a></li>
+                    <li><a href="transition.html" data-lang="zh">轉換計劃</a><a href="transition.html" data-lang="en">Transition</a></li>
+                    <li><a href="resources.html" data-lang="zh">實用資源</a><a href="resources.html" data-lang="en">Resources</a></li>
+                    <li><a href="meals.html" data-lang="zh">餐單</a><a href="meals.html" data-lang="en">Meals</a></li>
+                    <li><a href="about.html" data-lang="zh">關於</a><a href="about.html" data-lang="en">About</a></li>
+                </ul>
+                <div class="language-switcher">
+                    <button class="lang-btn" data-lang-btn="zh" onclick="switchLanguage('zh')">繁中</button>
+                    <button class="lang-btn" data-lang-btn="en" onclick="switchLanguage('en')">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h2 data-lang="zh">為香港貓主提供的生肉飲食入門指南</h2>
+            <h2 data-lang="en">Raw Feeding Guide for Hong Kong Cat Owners</h2>
+            <p data-lang="zh">了解如何安全、營養均衡地為您的貓咪準備生肉飲食</p>
+            <p data-lang="en">Learn how to safely and nutritiously prepare raw food for your cat</p>
+            <div class="pmr-badge">
+                <strong data-lang="zh">🎯 本指南採用：獵物模型生肉飲食 (Prey Model Raw - PMR)</strong>
+                <strong data-lang="en">🎯 This guide uses: Prey Model Raw (PMR)</strong>
+            </div>
+            <div class="brand-badge">
+                <p data-lang="zh">由 <strong>AnyMoThings</strong> 提供</p>
+                <p data-lang="en">Provided by <strong>AnyMoThings</strong></p>
+                <a href="https://www.instagram.com/anymothings/" target="_blank" rel="noopener noreferrer" class="instagram-link-inline">
+                    📷 @anymothings
+                </a>
+            </div>
+        </section>
+
+        <section class="info-card">
+            <h3>⚠️ 重要提示 Important Notice</h3>
+            <p>生肉飲食需要仔細規劃和準備。建議在開始前諮詢獸醫。</p>
+            <p>Raw feeding requires careful planning. Consult your veterinarian before starting.</p>
+        </section>
+
+        <section class="content-section">
+            <h3>🥩 什麼是獵物模型生肉飲食 (PMR)？</h3>
+            <p><strong>Prey Model Raw (PMR)</strong> 是最接近貓咪天然飲食的方法，模仿野生貓科動物捕食整隻獵物的營養比例。</p>
+            
+            <div class="pmr-explanation">
+                <h4>PMR 核心原則：</h4>
+                <ul>
+                    <li>✅ <strong>純肉食</strong> - 只包含動物性成分</li>
+                    <li>✅ <strong>無植物添加</strong> - 不添加蔬菜、水果或穀物</li>
+                    <li>✅ <strong>無合成補充劑</strong> - 營養來自天然食材</li>
+                    <li>✅ <strong>模仿整隻獵物</strong> - 複製老鼠、小鳥等獵物的營養比例</li>
+                </ul>
+            </div>
+
+            <h4>PMR 標準比例 (80/10/10)：</h4>
+            <ul>
+                <li><strong>80%</strong> 肌肉肉類 (Muscle meat) - 包括心臟</li>
+                <li><strong>10%</strong> 可食用骨頭 (Edible bone)</li>
+                <li><strong>10%</strong> 內臟 (Organ meat) - 肝臟 5% + 其他分泌器官 5%</li>
+            </ul>
+
+            <div class="info-box">
+                <h4>🆚 PMR vs BARF 的分別：</h4>
+                <p><strong>BARF (Biologically Appropriate Raw Food)</strong> 包含蔬菜、水果和補充劑。</p>
+                <p><strong>PMR (Prey Model Raw)</strong> 只使用動物性成分，更符合貓作為專性肉食動物的生理需求。</p>
+                <p class="tip">💡 本指南專注於 PMR，因為貓咪不需要植物性食物，所有營養都能從動物組織獲得。</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h3>✅ 潛在好處 Potential Benefits</h3>
+            <ul>
+                <li>更健康的皮毛 Healthier coat</li>
+                <li>更好的消化 Better digestion</li>
+                <li>更清潔的牙齒 Cleaner teeth</li>
+                <li>更高的能量水平 Higher energy levels</li>
+                <li>更少的糞便氣味 Less stool odor</li>
+            </ul>
+        </section>
+
+        <section class="content-section warning">
+            <h3>⚠️ 風險與注意事項 Risks & Precautions</h3>
+            <ul>
+                <li><strong>細菌污染：</strong>生肉可能含有沙門氏菌、大腸桿菌等細菌</li>
+                <li><strong>營養不均衡：</strong>必須按正確比例配製</li>
+                <li><strong>寄生蟲：</strong>需要冷凍處理或使用可靠來源</li>
+                <li><strong>處理衛生：</strong>準備後徹底清潔雙手和器具</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h3>🛒 香港採購建議 Shopping in Hong Kong</h3>
+            <p>在香港可以考慮以下來源：</p>
+            <ul>
+                <li>街市新鮮肉檔 Local wet markets</li>
+                <li>超市肉類部 Supermarket meat sections</li>
+                <li>寵物專門店 Pet specialty stores</li>
+                <li>網上訂購 Online pet food suppliers</li>
+            </ul>
+            <p class="tip">💡 建議：選擇人類食用級別的肉類，確保新鮮度</p>
+        </section>
+
+        <section class="content-section">
+            <h3>🧊 安全處理指南 Safe Handling</h3>
+            <ol>
+                <li>購買後立即冷藏或冷凍</li>
+                <li>冷凍至少3天以殺死寄生蟲</li>
+                <li>使用獨立砧板和刀具</li>
+                <li>準備後徹底清潔所有表面</li>
+                <li>未食用的份量密封冷藏，24小時內使用</li>
+            </ol>
+        </section>
+
+        <section class="cta">
+            <h3>準備開始了嗎？</h3>
+            <p>先了解不同飲食方式的比較，或直接使用計算器規劃餐單</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="comparison.html" class="btn">查看飲食比較 View Comparison</a>
+                <a href="calculator.html" class="btn">前往計算器 Go to Calculator</a>
+            </div>
+            <div style="margin-top: 2rem;">
+                <p style="font-size: 1.1rem;">💬 有問題？在 Instagram 聯絡我們</p>
+                <a href="https://www.instagram.com/anymothings/" target="_blank" rel="noopener noreferrer" class="instagram-cta">
+                    📷 @anymothings
+                </a>
+            </div>
+        </section>
+
+        <!-- AnyMoThings Meals Section -->
+        <section class="anymothings-section">
+            <h2>AnyMoThings 生肉餐（非必須）</h2>
+            <h3 class="section-subtitle">AnyMoThings Meals (Optional)</h3>
+            
+            <div class="anymothings-content">
+                <div class="bilingual-block">
+                    <div class="chinese-text">
+                        <p><strong>本應用程式適用於自家準備 PMR 和商業 PMR 餐單。</strong></p>
+                        <p>如果你偏好方便，AnyMoThings 生肉餐可以配合你的 PMR 計劃。我們的餐單遵循 80/10/10 獵物模型比例。</p>
+                    </div>
+                    <div class="english-text">
+                        <p><strong>This app works for both home-prep PMR and commercial PMR meals.</strong></p>
+                        <p>If you prefer convenience, AnyMoThings meals can match your PMR plan. Our meals follow 80/10/10 Prey Model ratios.</p>
+                    </div>
+                </div>
+                
+                <div class="anymothings-cta">
+                    <a href="meals.html" class="btn btn-secondary">查看餐單選擇 View Meal Options</a>
+                    <a href="https://www.instagram.com/anymothings/" target="_blank" rel="noopener noreferrer" class="btn btn-instagram">
+                        📷 View Instagram @anymothings
+                    </a>
+                    <a href="https://www.instagram.com/anymothings/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        💬 DM 你的貓咪資料尋求協助<br>
+                        <span style="font-size: 0.9em;">DM us your cat profile for help</span>
+                    </a>
+                </div>
+                
+                <div class="anymothings-disclaimer">
+                    <p><strong>⚠️ 重要聲明：</strong>即食餐是選項，不是必須。本應用程式的主要目的是教育和支援自家準備 PMR。</p>
+                    <p><strong>Important:</strong> Ready-made meals are optional, not required. This app's primary purpose is to educate and support home-prep PMR.</p>
+                    <p style="margin-top: 0.5rem; font-size: 0.95em; opacity: 0.9;">僅供教育參考，並非醫療建議 | Educational only, not medical advice</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>常見問題 Frequently Asked Questions</h2>
+            <p class="section-intro">香港貓主最常問的 PMR 問題 | Most common PMR questions from HK cat owners</p>
+            
+            <div class="faq-container">
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span class="faq-icon">❓</span>
+                        <span class="faq-text">什麼是 PMR (Prey Model Raw)？ | What is PMR?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="chinese-answer">
+                            <p><strong>中文解答：</strong></p>
+                            <p>PMR（Prey Model Raw，獵物模型生肉飲食）是模仿貓咪在野外捕食整隻獵物的飲食模式。使用 80% 肌肉肉類、10% 骨頭、10% 內臟的比例，不添加蔬菜、水果或補充劑。</p>
+                        </div>
+                        <div class="english-answer">
+                            <p><strong>English Answer:</strong></p>
+                            <p>PMR (Prey Model Raw) is a feeding approach that mimics how cats would eat whole prey in the wild. It uses 80% muscle meat, 10% bone, and 10% organs, without adding vegetables, fruits, or supplements.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span class="faq-icon">❓</span>
+                        <span class="faq-text">PMR 和 BARF 有什麼分別？ | What's the difference between PMR and BARF?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="chinese-answer">
+                            <p><strong>中文解答：</strong></p>
+                            <p>PMR 只包含動物性成分（肉、骨、內臟），不添加蔬菜或補充劑。BARF（生物學適當生食）則包含約 10-20% 的蔬菜和水果。PMR 認為貓咪是專性肉食動物，不需要植物性食物。</p>
+                        </div>
+                        <div class="english-answer">
+                            <p><strong>English Answer:</strong></p>
+                            <p>PMR contains only animal components (meat, bone, organs) without vegetables or supplements. BARF (Biologically Appropriate Raw Food) includes about 10-20% vegetables and fruits. PMR recognizes cats as obligate carnivores that don't require plant matter.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span class="faq-icon">❓</span>
+                        <span class="faq-text">在香港炎熱潮濕的天氣下，PMR 安全嗎？ | Is PMR safe in Hong Kong's hot and humid weather?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="chinese-answer">
+                            <p><strong>中文解答：</strong></p>
+                            <p>是的，只要遵循適當的食物安全措施。關鍵是：購買後 30 分鐘內冷藏、使用密封容器、解凍後 24 小時內餵食、剩餘食物 30 分鐘內清理。健康貓咪的胃酸 pH 值 1-2，比人類更酸，能有效殺死大部分細菌。</p>
+                        </div>
+                        <div class="english-answer">
+                            <p><strong>English Answer:</strong></p>
+                            <p>Yes, as long as proper food safety measures are followed. Key points: refrigerate within 30 minutes of purchase, use sealed containers, feed within 24 hours after thawing, clean up leftovers within 30 minutes. Healthy cats have stomach pH 1-2, more acidic than humans, effectively killing most bacteria.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span class="faq-icon">❓</span>
+                        <span class="faq-text">為什麼獸醫通常推薦乾糧？ | Why do vets often recommend kibble?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="chinese-answer">
+                            <p><strong>中文解答：</strong></p>
+                            <p>獸醫推薦乾糧有多個原因：方便、營養標準化、減少食物安全風險、獸醫學院的營養課程主要由寵物食品公司贊助。這不代表獸醫錯誤，而是反映了不同的風險評估和專業訓練。我們鼓勵與獸醫討論 PMR，而不是對抗。</p>
+                        </div>
+                        <div class="english-answer">
+                            <p><strong>English Answer:</strong></p>
+                            <p>Vets recommend kibble for several reasons: convenience, standardized nutrition, reduced food safety risks, and veterinary nutrition courses are often sponsored by pet food companies. This doesn't mean vets are wrong, but reflects different risk assessments and professional training. We encourage discussing PMR with vets, not opposing them.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span class="faq-icon">❓</span>
+                        <span class="faq-text">如何在香港安全儲存生肉？ | How to store raw food safely in HK?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="chinese-answer">
+                            <p><strong>中文解答：</strong></p>
+                            <p>購買後立即冷藏或冷凍。使用密封容器或袋子，與人類食物分開。冷凍至少 3 天以殺死寄生蟲。解凍時在雪櫃內進行，不要在室溫下解凍。小型雪櫃的家庭可以準備 3-4 天份量，更頻繁採購。</p>
+                        </div>
+                        <div class="english-answer">
+                            <p><strong>English Answer:</strong></p>
+                            <p>Refrigerate or freeze immediately after purchase. Use sealed containers or bags, separate from human food. Freeze for at least 3 days to kill parasites. Thaw in refrigerator, not at room temperature. Households with small freezers can prepare 3-4 days' worth and shop more frequently.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span class="faq-icon">❓</span>
+                        <span class="faq-text">幼貓可以吃 PMR 嗎？ | Can kittens eat PMR?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="chinese-answer">
+                            <p><strong>中文解答：</strong></p>
+                            <p>可以！幼貓從 8-10 週開始可以吃 PMR。幼貓需要更高的能量和鈣質，建議增加骨頭比例至 12-15%，每日餵食 3-4 次。確保肉類切成適當大小，讓幼貓能安全咀嚼。建議在轉換前諮詢獸醫。</p>
+                        </div>
+                        <div class="english-answer">
+                            <p><strong>English Answer:</strong></p>
+                            <p>Yes! Kittens can start PMR from 8-10 weeks old. Kittens need higher energy and calcium, so increase bone ratio to 12-15% and feed 3-4 times daily. Ensure meat is cut to appropriate size for safe chewing. Consult a vet before transitioning.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span class="faq-icon">❓</span>
+                        <span class="faq-text">如何從乾糧轉換到 PMR？ | How to transition from dry food to PMR?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="chinese-answer">
+                            <p><strong>中文解答：</strong></p>
+                            <p>逐步轉換，通常需要 1-4 週。開始時混合少量生肉與現有食物，逐漸增加生肉比例。觀察貓咪的糞便、食慾和整體狀況。有些貓咪適應快，有些需要更長時間。使用我們的<a href="transition.html">轉換計劃器</a>獲取詳細指引。</p>
+                        </div>
+                        <div class="english-answer">
+                            <p><strong>English Answer:</strong></p>
+                            <p>Transition gradually, typically taking 1-4 weeks. Start by mixing small amounts of raw meat with current food, gradually increasing the raw portion. Monitor your cat's stool, appetite, and overall condition. Some cats adapt quickly, others need more time. Use our <a href="transition.html">transition planner</a> for detailed guidance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 8 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span class="faq-icon">❓</span>
+                        <span class="faq-text">如果我的貓咪拒絕吃內臟怎麼辦？ | What if my cat refuses organs?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="chinese-answer">
+                            <p><strong>中文解答：</strong></p>
+                            <p>這很常見！嘗試：1) 將內臟切成小塊混入肌肉肉類中；2) 輕微煎一下表面（不要煮熟）；3) 從極少量開始（1-2%），逐漸增加；4) 嘗試不同動物的內臟（有些貓咪偏好雞肝而不是牛肝）。如果真的無法接受，可以考慮使用符合 PMR 比例的即食餐。</p>
+                        </div>
+                        <div class="english-answer">
+                            <p><strong>English Answer:</strong></p>
+                            <p>This is common! Try: 1) Cut organs into small pieces and mix with muscle meat; 2) Lightly sear the surface (don't cook through); 3) Start with very small amounts (1-2%) and gradually increase; 4) Try organs from different animals (some cats prefer chicken liver over beef liver). If truly unable to accept, consider ready-made meals that follow PMR ratios.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 9 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span class="faq-icon">❓</span>
+                        <span class="faq-text">如何輪換蛋白質？ | How do I rotate proteins?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="chinese-answer">
+                            <p><strong>中文解答：</strong></p>
+                            <p>建議每週輪換 2-3 種不同蛋白質來源。例如：週一至週三餵雞肉，週四至週五餵牛肉，週六至週日餵鴨肉或兔肉。不要連續超過 2 週只餵食同一種肉類。輪換確保營養多樣化，預防食物敏感。查看我們的<a href="resources.html">資源頁面</a>了解更多。</p>
+                        </div>
+                        <div class="english-answer">
+                            <p><strong>English Answer:</strong></p>
+                            <p>Rotate 2-3 different protein sources weekly. For example: Monday-Wednesday feed chicken, Thursday-Friday feed beef, Saturday-Sunday feed duck or rabbit. Don't feed the same meat for more than 2 consecutive weeks. Rotation ensures nutritional diversity and prevents food sensitivities. Check our <a href="resources.html">resources page</a> for more.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 10 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span class="faq-icon">❓</span>
+                        <span class="faq-text">我需要添加補充劑嗎？ | Do I need supplements?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="chinese-answer">
+                            <p><strong>中文解答：</strong></p>
+                            <p>如果嚴格遵循 PMR 80/10/10 比例並輪換蛋白質，通常不需要補充劑。貓咪能從天然食材獲得所有必需營養素。例外情況：無骨餐需要鈣質補充、特殊健康狀況（請諮詢獸醫）。不要隨意添加補充劑，過量可能有害。</p>
+                        </div>
+                        <div class="english-answer">
+                            <p><strong>English Answer:</strong></p>
+                            <p>If strictly following PMR 80/10/10 ratios and rotating proteins, supplements are usually not needed. Cats can obtain all essential nutrients from natural ingredients. Exceptions: boneless meals need calcium supplementation, special health conditions (consult vet). Don't add supplements randomly, excess can be harmful.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 11 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span class="faq-icon">❓</span>
+                        <span class="faq-text">在香港餵 PMR 會很貴嗎？ | Is PMR expensive in Hong Kong?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="chinese-answer">
+                            <p><strong>中文解答：</strong></p>
+                            <p>成本取決於採購來源。從街市購買，PMR 的成本可能與高級罐頭相若或更便宜（約 HK$50-80/kg）。從超市或寵物店購買會較貴（HK$80-150/kg）。使用我們的<a href="resources.html">成本計算器</a>了解你的實際花費。長遠可能節省醫療費用。</p>
+                        </div>
+                        <div class="english-answer">
+                            <p><strong>English Answer:</strong></p>
+                            <p>Cost depends on sourcing. Buying from wet markets, PMR can cost similar to or less than premium canned food (about HK$50-80/kg). Buying from supermarkets or pet stores is more expensive (HK$80-150/kg). Use our <a href="resources.html">cost calculator</a> to understand your actual spending. May save on vet bills long-term.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 12 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span class="faq-icon">❓</span>
+                        <span class="faq-text">可以混合 PMR 和乾糧嗎？ | Can I mix PMR with kibble?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="chinese-answer">
+                            <p><strong>中文解答：</strong></p>
+                            <p>不建議長期混合。生肉和乾糧的消化時間不同，混合可能導致消化問題。如果需要混合（例如轉換期或旅行時），建議分開餵食：早上餵乾糧，晚上餵生肉，中間間隔至少 6-8 小時。長遠目標應該是完全轉換到 PMR 或選擇其中一種飲食方式。</p>
+                        </div>
+                        <div class="english-answer">
+                            <p><strong>English Answer:</strong></p>
+                            <p>Not recommended long-term. Raw meat and kibble have different digestion times, mixing may cause digestive issues. If mixing is necessary (e.g., during transition or travel), feed separately: kibble in morning, raw at night, with at least 6-8 hours between. Long-term goal should be complete transition to PMR or choosing one diet method.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-footer">
+                <p>還有更多問題？查看我們的<a href="vet-faq.html">獸醫 FAQ</a>或<a href="glossary.html">詞彙表</a></p>
+                <p>More questions? Check our <a href="vet-faq.html">Vet FAQ</a> or <a href="glossary.html">Glossary</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🐾 AnyMoThings</h3>
+                    <p>為香港貓主提供優質生肉飲食資訊</p>
+                    <p>Quality raw feeding information for Hong Kong cat owners</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>關注我們 Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/anymothings/" target="_blank" rel="noopener noreferrer" class="instagram-link">
+                            <span class="instagram-icon">📷</span>
+                            <span>@anymothings</span>
+                        </a>
+                    </div>
+                    <p class="social-description">在 Instagram 查看更多貓咪生肉飲食分享</p>
+                    <p class="social-description">See more raw feeding tips on Instagram</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>聯絡 Contact</h3>
+                    <p>📧 透過 Instagram 私訊聯絡我們</p>
+                    <p>DM us on Instagram</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 AnyMoThings | Raw Cat Diet HK</p>
+                <p>僅供教育參考 For educational purposes only | 請諮詢獸醫專業意見 Always consult with a veterinarian</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('SW registered:', registration);
+                    })
+                    .catch(error => {
+                        console.log('SW registration failed:', error);
+                    });
+            });
+        }
+        
+        // FAQ Toggle Function
+        function toggleFAQ(button) {
+            const faqItem = button.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            const arrow = button.querySelector('.faq-arrow');
+            
+            // Close all other FAQs
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem && item.classList.contains('active')) {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-answer').style.maxHeight = null;
+                    item.querySelector('.faq-arrow').style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            // Toggle current FAQ
+            faqItem.classList.toggle('active');
+            
+            if (faqItem.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                arrow.style.transform = 'rotate(180deg)';
+            } else {
+                answer.style.maxHeight = null;
+                arrow.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>        }
+    </script>
+</body>
+</html>
