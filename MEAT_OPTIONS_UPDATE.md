@@ -30,8 +30,8 @@ Two new protein sources have been added to the app:
 - Different amino acid profile
 
 **HK Availability:**
-- Wet markets (fresh)
-- Supermarkets (frozen)
+- Supermarkets (frozen, quality-controlled)
+- Pet stores (pre-portioned)
 - More affordable than venison
 - Readily available in Hong Kong
 
@@ -96,44 +96,40 @@ The app now recommends these proteins:
 ### Where to Buy in Hong Kong:
 
 **Chicken & Duck:**
-- Wet markets (freshest, cheapest)
-- Supermarkets (convenient)
-- Pet stores (pre-portioned)
+- Supermarkets (convenient, quality-controlled)
+- Pet stores (pre-portioned, hormone-free options)
+- Royal Farm (hormone-free certified)
 
 **Beef:**
-- Wet markets (various cuts)
-- Supermarkets (frozen options)
+- Supermarkets (frozen options, traceable)
 - Butchers (can request specific cuts)
+- Midfield products (quality assured)
 
 **Rabbit:**
-- Some wet markets
-- Online suppliers
+- Online suppliers (French imports recommended)
 - Specialty pet stores
+- Certified importers
 
 **Venison:**
 - Specialty pet stores
 - Online raw food suppliers
 - Imported frozen (more expensive)
 
-**Fish:**
-- Wet markets (whole fish best)
-- Supermarkets (check for bones)
-- Avoid: Tuna (too much, mercury risk)
 
 ---
 
 ## Cost Comparison (HK$ per kg, approximate)
 
-| Protein | Wet Market | Supermarket | Pet Store |
-|---------|------------|-------------|-----------|
-| Chicken | $40-60 | $60-80 | $80-120 |
-| Duck | $50-70 | $70-90 | $90-130 |
-| Beef | $60-100 | $80-120 | $100-150 |
-| Rabbit | $80-120 | $100-140 | $120-180 |
-| Venison | $150-200 | $180-250 | $200-300 |
-| Fish | $60-100 | $80-120 | $100-150 |
+| Protein | Supermarket | Pet Store | Certified Suppliers |
+|---------|-------------|-----------|---------------------|
+| Chicken | $60-80 | $80-120 | $90-140 |
+| Duck | $70-90 | $90-130 | $100-150 |
+| Beef | $80-120 | $100-150 | $120-180 |
+| Rabbit | $100-140 | $120-180 | $140-200 |
+| Venison | $180-250 | $200-300 | $220-350 |
+| Fish | $80-120 | $100-150 | $120-180 |
 
-**Note:** Prices vary by cut, quality, and season
+**Note:** Prices vary by cut, quality, and season. Certified suppliers ensure hormone-free, traceable sources.
 
 ---
 
